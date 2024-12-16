@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".ui.ServerActivity">
 
     <LinearLayout
@@ -12,6 +13,25 @@
         android:padding="@dimen/layout_margin_top_height">
 
         <include layout="@layout/layout_address_port" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top_height"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/server_lab_id3" />
+
+            <EditText
+                android:id="@+id/et_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:inputType="text" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,13 +61,32 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/server_lab_id3" />
+                android:text="@string/server_lab_port_hop" />
 
             <EditText
-                android:id="@+id/et_id"
+                android:id="@+id/et_port_hop"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
                 android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top_height"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/server_lab_port_hop_interval" />
+
+            <EditText
+                android:id="@+id/et_port_hop_interval"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:inputType="number" />
 
         </LinearLayout>
 
